@@ -33,7 +33,7 @@
 			this.txtIndex = new System.Windows.Forms.TextBox();
 			this.lblToken = new System.Windows.Forms.Label();
 			this.txtToken = new System.Windows.Forms.TextBox();
-			this.btnAutotype = new System.Windows.Forms.Button();
+			this.btnCopy = new System.Windows.Forms.Button();
 			this.btnClose = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -65,22 +65,21 @@
 			// 
 			// txtToken
 			// 
-			this.txtToken.BackColor = System.Drawing.SystemColors.Window;
 			this.txtToken.Location = new System.Drawing.Point(54, 32);
 			this.txtToken.Name = "txtToken";
 			this.txtToken.ReadOnly = true;
 			this.txtToken.Size = new System.Drawing.Size(263, 20);
 			this.txtToken.TabIndex = 3;
 			// 
-			// btnAutotype
+			// btnCopy
 			// 
-			this.btnAutotype.Location = new System.Drawing.Point(323, 4);
-			this.btnAutotype.Name = "btnAutotype";
-			this.btnAutotype.Size = new System.Drawing.Size(75, 23);
-			this.btnAutotype.TabIndex = 4;
-			this.btnAutotype.Text = "Autotype";
-			this.btnAutotype.UseVisualStyleBackColor = true;
-			this.btnAutotype.Click += new System.EventHandler(this.btnAutotype_Click);
+			this.btnCopy.Location = new System.Drawing.Point(323, 4);
+			this.btnCopy.Name = "btnCopy";
+			this.btnCopy.Size = new System.Drawing.Size(75, 23);
+			this.btnCopy.TabIndex = 4;
+			this.btnCopy.Text = "Copy";
+			this.btnCopy.UseVisualStyleBackColor = true;
+			this.btnCopy.Click += new System.EventHandler(this.btnAutotype_Click);
 			// 
 			// btnClose
 			// 
@@ -95,13 +94,13 @@
 			// 
 			// GenerateTokenForm
 			// 
-			this.AcceptButton = this.btnAutotype;
+			this.AcceptButton = this.btnCopy;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnClose;
 			this.ClientSize = new System.Drawing.Size(409, 64);
 			this.Controls.Add(this.btnClose);
-			this.Controls.Add(this.btnAutotype);
+			this.Controls.Add(this.btnCopy);
 			this.Controls.Add(this.txtToken);
 			this.Controls.Add(this.lblToken);
 			this.Controls.Add(this.txtIndex);
@@ -125,7 +124,7 @@
 		private System.Windows.Forms.TextBox txtIndex;
 		private System.Windows.Forms.Label lblToken;
 		private System.Windows.Forms.TextBox txtToken;
-		private System.Windows.Forms.Button btnAutotype;
+		private System.Windows.Forms.Button btnCopy;
 		private System.Windows.Forms.Button btnClose;
 	}
 }

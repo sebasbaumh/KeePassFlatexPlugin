@@ -209,11 +209,13 @@ namespace KeePassFlatexPlugin
 				{
 					//get token and construct temporary entry
 					String token = frm.Token;
-					PwEntry entry = new PwEntry(false, false);
-					//create an empty title field to prevent bug in iTanMaster plugin
-					entry.Strings.Set(PwDefs.TitleField, new KeePassLib.Security.ProtectedString(false, ""));
-					entry.Strings.Set(PwDefs.PasswordField, new KeePassLib.Security.ProtectedString(true, token));
-					AutoType.PerformIntoPreviousWindow(phHost.MainWindow, entry, phHost.Database, "{PASSWORD}{ENTER}");
+					//PwEntry entry = new PwEntry(false, false);
+					////create an empty title field to prevent bug in iTanMaster plugin
+					//entry.Strings.Set(PwDefs.TitleField, new KeePassLib.Security.ProtectedString(false, ""));
+					//entry.Strings.Set(PwDefs.PasswordField, new KeePassLib.Security.ProtectedString(true, token));
+					//AutoType.PerformIntoPreviousWindow(phHost.MainWindow, entry, phHost.Database, "{PASSWORD}{ENTER}");
+					//just copy the entry to the clipboard
+					Clipboard.SetText(token);
 				}
 			}
 			catch (Exception ex)

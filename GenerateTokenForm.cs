@@ -37,6 +37,17 @@ namespace KeePassFlatexPlugin
 			: this()
 		{
 			this.tokens = tokens;
+			//get token from clipboard if set
+			if (Clipboard.ContainsText())
+			{
+				String token = Clipboard.GetText();
+				//check it
+				if (KeePassFlatexPluginExt.rToken.IsMatch(token))
+				{
+					txtIndex.Text = token;
+					GenerateToken();
+				}
+			}
 		}
 
 		private void GenerateToken()
